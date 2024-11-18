@@ -22,7 +22,8 @@ def home():
     })
 
 # Step 2: Load the dataset
-dataset = pd.read_csv('data.csv')
+# Read the CSV file with a different encoding
+dataset = pd.read_csv('data.csv', encoding='ISO-8859-1')
 
 # Assuming your dataset has 'recipe_id', 'ingredients', 'cooking_instructions', 'recipe_name', 'net_price', and 'image_path' columns
 recipe_ids = dataset['recipe_id']
